@@ -1,0 +1,138 @@
+
+import time
+
+print ("\n" * 3)
+time.sleep(3)
+print ("\nA long time ago, a brave warrior strode forth from the frozen north.")
+time.sleep(2)
+print ("Does this warrior have a name?")
+name = input("> ")
+print (name,"the barbarian, weilding an iron sword in search of adventure!")
+time.sleep(2)
+print ("However evil lurks nearby...")
+time.sleep(2)
+print ("A pair of bulbous eyes regards the hero...")
+time.sleep(2)
+print ("Will the great", name, "prevail in slaying the evil...")
+time.sleep(2)
+print ("Or will he lose his life to the dark forces...")
+time.sleep(2)
+print ("Only time will tell...")
+time.sleep(1)
+print('...')
+time.sleep(1)
+print('...')
+time.sleep(1)
+print('...')
+time.sleep(1)
+print('...')
+time.sleep(5)
+print("\n" *200)
+
+print ("you find yourself in a small inn.")
+time.sleep(2)
+print("There is little gold in your pocket but your sword is ready for adventure.")
+time.sleep(3)
+print("With you there are 3 other patriots.")
+time.sleep(2)
+print ("A ragged looking man and a pair of seemingly dangerous guards.")
+
+def start():
+    print("\n----------")
+    print("Who do you approach?")
+    print("\n")
+    print("1. The ragged looking man")
+    print("2. The dangerous guards")
+    
+    cmdlist=["1", "2"]
+    cmd=getcmd(cmdlist)
+    
+    if cmd == "1":
+        ragged()
+    elif cmd == "2":
+        guards()
+        
+def ragged():
+    print("\n"*200)
+    print("You walk up to the ragged looking man and greet him")
+    time.sleep(2)
+    print("The mans hair was light and whispy, his garments were dirty with the odd hole throughout.")
+    time.sleep(2)
+    print('''You greet the man and he returns it with toothless grin as he says \n "Tell you what traveller buy me a cup of wine and I'll tell you about treasures untold." \nHe stares you in the eye and pulls a wide grin''')
+    time.sleep(2)
+    ragged = True
+
+
+def guards():
+    print("\n"*200)
+    print('''You walk up to the dangerous looking guards''')
+    time.sleep(1)
+    print('''In each of their hands they held a cup each to themselves as they laughed away.\nWith both of them weiled a sheethed sword''')
+    time.sleep(4)
+    print('''As you walk over the guards stop laughing and turn their attention your way ''')
+    time.sleep(3)
+    print('''You greet them and they each give you a snarl before one asks with a stern tone\n"What do you want barbarian." \nThe other guard tightens a grip on the hilt of his sword''')
+    time.sleep(4)
+    guards = True
+
+def getcmd(cmdlist):
+    cmd = input(name+">")
+    if cmd in cmdlist:
+        return cmd
+    elif cmd == "help":
+        print("\nEnter your choices as detailed in the game.")
+        print("or enter 'quit' to leave the game")
+        return getcmd(cmdlist)
+    elif cmd ==("quit"):
+        print("\n----------")
+        time.sleep(1)
+        print("Sadly our hero returned to their homeland with nothing...")
+        time.sleep(2)
+        print("Maybe one day they will try again...")
+        time.sleep(2)
+        print("Until next time travellor.")
+        time.sleep(5)
+        exit()
+        
+if __name__=="__ main __":
+    start()
+
+time.sleep(1)
+start()
+
+def rggd_interact1():
+    print("\n----------")
+    print("How do you respond?")
+    print("\n")
+    print("1. Buy him the wine and see what he has to say")
+    print("2. Ask him about the treasures before buying him wine")
+    print("3. Decline the offer and walk away")
+    
+    cmdlist=["1", "2", "3"]
+    cmd=getcmd(cmdlist)
+    if cmd == "1":
+        rggd_agree()
+    elif cmd == "2":
+        rggd_annoy()
+    elif cmd == "3":
+        rggd_decline()
+
+def rggd_agree():
+    print("\n*200")
+    print('''You accept the ragged mans offer and buy him some wine''')
+    time.sleep(2)
+    print("...")
+    time.sleep(2)
+    print('''The ragged man was grateful and introduces himself''')
+    time.sleep(2)
+    print('''"Nice to meet you travellor..."\n"Nice to meet you I'm Harry what's your name?"''')
+    time.sleep(3)
+    print("...")
+    time.sleep(2)
+    print('''"Ah nice to meet you"''',name ,'''\nBy the looks of it you're quite the warrior"''')
+    time.sleep(3)
+    
+if ragged == True:
+    rggd_interact1()
+elif guards == True:
+    print("Guards")
